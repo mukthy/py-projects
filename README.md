@@ -1,2 +1,2 @@
 # py-projects
-# This Repo contains Python Projects.
+# This Repo contains Simple Python Projects.
