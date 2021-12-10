@@ -15,14 +15,14 @@ if size == 'S':
     else:
         bill = small
 
-if size == 'M':
+elif size == 'M':
 
     if add_pepperoni == 'Y':
         bill = medium + 3
     else:
         bill = medium
 
-if size == 'L':
+elif size == 'L':
 
     if add_pepperoni == 'Y':
         bill = large + 3
