@@ -24,15 +24,15 @@ print("Welcome to Treasure Island.")
 print("Your mission is to find the treasure.")
 
 direction = input(
-    'You\'re at a crossroad. Where do you want to go? Type "left" or "right" ')
+    'You\'re at a crossroad. Where do you want to go? Type "left" or "right" ').lower()
 
 if direction == 'left':
     action = input(
-        'You\'ve come to a lake. There is an island in the middle of the lake. Type "wait" to wait for a boat. Type "swim" to swim across. ')
+        'You\'ve come to a lake. There is an island in the middle of the lake. Type "wait" to wait for a boat. Type "swim" to swim across. ').lower()
 
     if action == 'wait':
         color = input(
-            "You arrive at the island unharmed. There is a house with 3 doors. One red, one yellow and one blue. Which colour do you choose? ")
+            "You arrive at the island unharmed. There is a house with 3 doors. One red, one yellow and one blue. Which colour do you choose? ").lower()
 
         if color == 'red':
             print("It's a room full of fire. Game Over.")
