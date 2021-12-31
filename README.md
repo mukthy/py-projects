@@ -215,3 +215,9 @@ c. After selecting you can click `Compare branches and continue`
 d. In the new merge request, check the Request for Merge option.
 
 e. Once the MR is approved. The appropriate user merges that MR and the work from your Feature branch will be merged into the default branch.
+
+5. What is a technical book/blog you read recently that you enjoyed?
+
+
+I enjoy going through this book, Automate the Boring Stuff with Python by By Al Sweigart. The good thing it is available for free under CC license. They also have a course on Udemy if we need to watch in visual. This book have cool trick and interesting project ideas to automate. I have not completed it and so far there is nothing to dislike.
+
