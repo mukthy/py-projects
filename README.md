@@ -1,3 +1,7 @@
+1. Print the usernames of all users and their home directories
+
+`cat /etc/passwd | awk -F ":" '{print $1 ":" $6}'`
+
 ```
 #!/bin/bash
 
