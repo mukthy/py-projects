@@ -78,4 +78,58 @@ There are some common causes for the slow performance:
 7. Since Database Webservevr and Web-Application all three are on the same server it will eat up the 8GB memory and CPU resources if the number of request increases. It would better to atleast put the Database server in a different server to increase the performance.
 
 Regards,
+
 Muktheeswaran 
+
+
+3. Sequence of Git Commands.
+
+1. to initialize
+
+`git init`
+
+2. to make sure who is commiting.
+
+`git config-global user.name "name"`
+
+`git config-global user.email "email@email.com"`
+
+3. to clone if its a remote repo before making the commit.
+
+`git clone <git repo>`
+
+4. add the current directly files/folders to staged.
+
+`git add .`
+
+5. commit the changes to repo.
+
+`git commit -m 'first commit'`
+
+6. for second commit, make some changes.
+
+`git commit -m 'second commit'`
+
+7. For feature branch, use checkout.
+
+`git checkout -b Feature`
+
+8. Check out master branch.
+
+`git checkout master`
+
+9. Add some changes and commit it.
+
+`git add files`
+
+`git commit -m 'third commit'`
+
+10. Merge the feature branch.
+
+`git merge Feature`
+
+11. make some changes and commit feature.
+
+`git add .`
+
+`git commit -m 'fourth commit'`
