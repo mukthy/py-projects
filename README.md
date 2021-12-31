@@ -40,3 +40,23 @@ fi
 # Replace the old MD5 hash in /var/log/current_users file with the new MD5 hash.
 echo "$newhash" > /var/log/current_users
 ```
+
+#  Runs once every hour.
+1. Make the userlist.sh file Executable by giving permissions.
+
+`chmod +x userlist.sh`
+
+`crontab -e` command to edit the cron-jobs
+2. For hourly Crontab we can enter the below command in the cron-tab.
+```
+@hourly /root/userlist.sh
+# OR
+# 5 * * * * /root/userlist.sh
+```
+It will look like this `crontab -l`
+```
+# For more information see the manual pages of crontab(5) and cron(8)
+# 
+# m h  dom mon dow   command
+@hourly /root/userlist.sh
+```
