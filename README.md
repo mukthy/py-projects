@@ -27,7 +27,7 @@ echo -e "$listuser" | md5sum | awk -F "-" '{print $1'} > /var/log/current_users
 hashfile=/var/log/current_users
 
 # Store the Hash in a new variable newhash to compare with the oldhash.
-newhash=$("echo $listuser" | md5sum)
+newhash=$(echo $listuser | md5sum | awk -F "-" '{print $1'})
 
 # Store the oldhash in a variable
 oldhash=$(cat $hashfile)
