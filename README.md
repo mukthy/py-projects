@@ -84,6 +84,8 @@ Muktheeswaran
 
 3. Sequence of Git Commands.
 
+Answer:
+
 1. to initialize.
 
 `git init`
