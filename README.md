@@ -135,3 +135,83 @@ Answer:
 `git add .`
 
 `git commit -m 'fourth commit'`
+
+
+4. Using Git to implement a new feature/change without affecting the main branch
+
+Answer:
+
+1. Clone the remote repository locally:
+
+`git clone https://github.com/mukthy/books-toscrape-challenge.git`
+
+2. Check if there are any available branches in the local repository:
+
+`git branch`
+
+3. To create a new branch called as `newfeature` on the local repository:
+
+`git branch newfeature`
+
+A git branch allows us to create a new working directory where we can make changes or add new content without affecting the main branch or source code.
+
+4. Check if the new branck is created
+
+`git branch`
+
+```
+*master
+newfeature
+```
+
+5. Switch from the `master` branch to the `newfeature` branch that we created:
+
+`git checkout newfeature`
+
+6. If you want to create a new branch and switch to the newly created branch using single command:
+
+`git checkout -b newfeature`
+
+Once you are switched to the `newfeature` branch you can make the changes to the files or add files/folders.
+
+7. Check all the untracked files and changes:
+
+`git status`
+
+8. To track all the changes made or files/folders in the new branch.
+
+`git add .`
+
+If you want to add only one single file of your new branch to track, then you can do the following:
+
+`git add filename.txt`
+
+9. To commit the changes to your local repository.
+
+`git commit -m 'First Commit Message from newfeature Branch"`
+
+10. To push the local repository to remote.
+
+
+
+a. to confirm the URL of the remote repository
+
+`git remote -v`
+
+b. To create a newfeature branch on the remote repository and push.
+
+`git push origin newfeature`
+
+11. Now you can create a Merge Request 
+
+
+
+a. Goto to your GitLab https://gitlab.com/muktheeswaran.m/sample.git and you should see Create merge request.
+
+b. In the New Merge Request screen you have to select the `source` and `target` branches, you can dropdown and select the branches.
+
+c. After selecting you can click `Compare branches and continue`
+
+d. In the new merge request, check the Request for Merge option.
+
+e. Once the MR is approved. The appropriate user merges that MR and the work from your Feature branch will be merged into the default branch.
