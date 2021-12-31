@@ -1,4 +1,4 @@
-`
+```
 #!/bin/bash
 
 # Print the usernames of all users and their home directories
@@ -35,4 +35,4 @@ fi
 
 # Replace the old MD5 hash in /var/log/current_users file with the new MD5 hash.
 echo "$newhash" > /var/log/current_users
-`
+```
