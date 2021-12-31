@@ -219,5 +219,5 @@ e. Once the MR is approved. The appropriate user merges that MR and the work fro
 5. What is a technical book/blog you read recently that you enjoyed?
 
 
-I enjoy going through this book, Automate the Boring Stuff with Python by By Al Sweigart. The good thing it is available for free under CC license. They also have a course on Udemy if we need to watch in visual. This book have cool trick and interesting project ideas to automate. I have not completed it and so far there is nothing to dislike.
+I enjoy going through this book, `Automate the Boring Stuff with Python` by `By Al Sweigart`. The good thing it is available for free under CC license. They also have a course on Udemy if we need to watch in visual. This book have cool trick and interesting project ideas to automate. I have not completed it and so far there is nothing to dislike.
 
