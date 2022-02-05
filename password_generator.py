@@ -15,6 +15,7 @@ num = random.sample(numbers, nr_numbers)
 sym = random.sample(symbols, nr_symbols)
 
 password_sum = let + num + sym
+print(password_sum)
 password_length = nr_letters + nr_symbols + nr_numbers
 
 password = ''.join(random.sample(password_sum, password_length))
