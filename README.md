@@ -1,1 +1,1 @@
-Basic Python Projects.
+Based on Basic Concepts Python. It also has some notes.
