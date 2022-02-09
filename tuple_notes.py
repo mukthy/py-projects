@@ -2,8 +2,8 @@
 
 # It is kind of a list and immutable means we cannot change or replace the item using the index.
 
-my_tuple = (1, 2, 3, 4, 5)
-print(my_tuple[2])
+my_tuple = (1, 2, 3, 4, 5, 5)
+print(my_tuple)
 
 # we can check if an item is in the tuple
 
@@ -15,8 +15,8 @@ new_tuple = my_tuple[1:2]
 print(new_tuple)
 
 # to assign every item of the tuple to a single variable.
-x, y, z, *other = (1, 2, 3, 4, 5, 6)
-print(x)
+#x, y, z, *other = (1, 2, 3, 4, 5, 6)
+# print(x)
 
 x = my_tuple[0]
 y = my_tuple[1]
