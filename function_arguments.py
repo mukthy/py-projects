@@ -22,7 +22,9 @@ def say_age(name='rajesh', age='26'):  # it has default parameters.
 
 say_age('mukthy', '29')
 say_age('rock', '24')
-# when function does not have any arguments or only on argments then it will take the predefined value (default parameters) from the function definition.
+
+# when function does not have any arguments or only one argments then it will take the predefined value (default parameters) from the function definition.
+
 say_age('timmy')
 say_age()
 
