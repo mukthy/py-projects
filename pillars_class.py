@@ -161,3 +161,7 @@ print(emails.email)
 # for character in [wizard1, archer1]:
 #    print(character)
 #    character.attack()
+# Introscpection in Python is very usefull. It helps in checking what an object has access too. As well tell us what type of object it is.
+
+
+print(dir(emails.sign_in))
