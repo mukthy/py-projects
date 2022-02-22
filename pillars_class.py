@@ -4,6 +4,9 @@
 
 # Abstraction: Hiding of information or abstracting away information and giving access to information what is necessary.
 
+import email
+
+
 class PlayerCharacter:
     def __init__(self, name, age):
         self.name = name
@@ -101,6 +104,9 @@ print(isinstance(wizard1, object))
 class User():
 
     # if there are no attributes or variable the we do not need __init__ method.
+    def __init__(self, email):
+        self.email = email
+
     def sign_in(self):
         return 'logged in'
 
@@ -109,7 +115,10 @@ class User():
 
 
 class Wizard(User):
-    def __init__(self, name, power):
+    def __init__(self, name, power, email):
+        # this is mentioned if we want to get the attributes of USer class.
+        # super refers to the parent class which above the wizard for now.
+        super().__init__(email)
         self.name = name
         self.power = power
 
@@ -128,10 +137,17 @@ class Archer(User):
         print(f'attacking with arrows: arrows left {self.num_arrows}')
 
 
-wizard1 = Wizard('Merlin', 50)
+class Emails(User):
+    def emails(self, email):
+        print(email)
+
+
+wizard1 = Wizard('Merlin', 50, 'merlin@gmail.com')
 archer1 = Archer('Robin', 100)
+emails = Emails('This is from Email Class: merlin@gmail.com')
 wizard1.attack()  # same method name but used with different objects
 archer1.attack()  # same method name but used with different objects
+print(emails.email)
 
 
 # def player_attack(char):
