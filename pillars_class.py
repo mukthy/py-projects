@@ -165,3 +165,5 @@ print(emails.email)
 
 
 print(dir(emails.sign_in))
+
+# MRO method resolution order is there to check the order of the class on how it is going to execute if multiple inheritince is implemented.
