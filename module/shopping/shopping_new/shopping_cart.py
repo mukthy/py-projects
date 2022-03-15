@@ -1,3 +1,3 @@
-def shopping_cart(item):
+def buy(item):
     cart = [item]
     return cart
