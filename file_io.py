@@ -15,7 +15,7 @@
 #     # print(my_file.readlines())
 
 try:
-    with open('sad.txt'):
+    with open('sad.txt') as my_file:
         print(my_file.read())
 except FileNotFoundError as err:
     print('file does not exist')
