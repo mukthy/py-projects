@@ -22,3 +22,37 @@ print(len(the_hobbit))
 
 a = 'hello'
 print(len(a))
+
+
+# Type Hinting
+# Annotate the arguments and the return value of a function with a type hint.
+
+def greet(name: str) -> str:
+    return f'Hello, {name}!'
+
+
+# The name: str syntax indicates the name argument should be of type str.
+# The -> syntax indicates the return value should be of type str.
+
+def headline(text: str, align: str = True) -> str:
+    if align:
+        return f"{text.title()}\n{'-' * len(text)}"
+    else:
+        return f" {text.title()}".center(50, "o")
+
+
+print(headline('123', align='center'))
+
+# PEP8 Recommendations
+# Use normal rules for colons, no space before and one space after a colon.
+
+text: str
+
+# Use spaces around the = sign when combining an argument annotation with a default value.
+
+align: bool = True
+
+# Use spaces around the -> arrow.
+
+def headline2(...) -> str:
+    pass
