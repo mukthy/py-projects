@@ -34,14 +34,14 @@ def greet(name: str) -> str:
 # The name: str syntax indicates the name argument should be of type str.
 # The -> syntax indicates the return value should be of type str.
 
-def headline(text: str, align: str = True) -> str:
+def headline(text: str, align: bool = True) -> str:
     if align:
         return f"{text.title()}\n{'-' * len(text)}"
     else:
         return f" {text.title()}".center(50, "o")
 
 
-print(headline('123', align='center'))
+print(headline('123', align=True))
 
 # PEP8 Recommendations
 # Use normal rules for colons, no space before and one space after a colon.
@@ -52,7 +52,21 @@ text: str
 
 align: bool = True
 
+
 # Use spaces around the -> arrow.
 
-def headline2(...) -> str:
-    pass
+# def headline2(...) -> str:
+#     pass
+
+# Type Checking with Mypy
+# Mypy is a Python type checker. It combines the expressive power and convenience of python with a powerful type system and compile-time type checking.
+# Initially started as a standalone variant of python with seamless dynamic and static typing.
+# Was rewritten to use annotations making it a static type check for regular python code.
+def headline2(text: str, centered: bool = False) -> str:
+    if not centered:
+        return f"{text.title()}\n{'-' * len(text)}"
+    else:
+        return f" {text.title()} ".center(50, "o")
+
+
+print(headline2('123', centered=True))
