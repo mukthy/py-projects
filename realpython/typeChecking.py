@@ -69,4 +69,35 @@ def headline2(text: str, centered: bool = False) -> str:
         return f" {text.title()} ".center(50, "o")
 
 
+print(headline2.__annotations__)
 print(headline2('123', centered=True))
+
+
+# type comments
+
+def func(arg):
+    # type: (float) -> float
+    age = 42  # type: int
+    return age * arg
+
+
+print(func(2.0))
+
+
+def headline3(text3, width=80, centered3=False):
+    # type: (str, int, bool) -> str
+    if not centered3:
+        return f"{text3.title()}\n{'-' * len(text3)}"
+    else:
+        return f" {text3.title()} ".center(50, "o")
+
+
+# Example of python types using list, dict and tuple
+
+from typing import List, Dict, Tuple
+
+names: List[str] = ['John', 'Paul', 'George', 'Ringo']
+version: Tuple[int, int, int] = (1, 2, 3)
+options: Dict[str, bool] = {'bold': True, 'hidden': False}
+
+print(__annotations__)
