@@ -53,3 +53,25 @@ async def get_shapes_by_id(shape_id: int):  # function to return the response
 async def post_shape(shape: Shape):  # function to return the response
     shapes.insert_one(shape.dict())
     return shape
+
+
+@app.put("/shapes/{shape_id}")  # decorator to map the endpoint to the function
+async def update_shape(shape_id: int, shape: Shape):  # function to return the response
+    if shapes.count_documents({"id": shape_id}) > 0:
+        shapes.replace_one({"id": shape_id}, shape.dict())
+        return shape
+    raise HTTPException(status_code=404, detail=f"No Shape with {shape_id} found")
+
+
+@app.put("/shapes/upsert/{shape_id}")  # decorator to map the endpoint to the function
+async def update_shape(shape_id: int, shape: Shape):  # function to return the response
+    shapes.replace_one({"id": shape_id}, shape.dict(), upsert=True)
+    return shape
+
+
+@app.delete("/shapes/{shape_id}")  # decorator to map the endpoint to the function
+async def delete_shape(shape_id: int):  # function to return the response
+    delete_result = shapes.delete_one({"id": shape_id})
+    if delete_result.deleted_count == 0:
+        raise HTTPException(status_code=404, detail=f"No Shape with {shape_id} found")
+    return {"message": f"Shape ID {shape_id} deleted"}
